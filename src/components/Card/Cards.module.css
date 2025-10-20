@@ -1,0 +1,78 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira";
+  gap: 1.5rem;
+  max-width: 1100px;
+  max-height: 572px;
+  margin: 48px auto;
+  padding: 16px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 24px 32px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.header img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.5);
+}
+
+.header h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.header p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 13px;
+}
+
+.text {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.advice {
+  opacity: 0.8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Grid joylashuvlari */
+.card:nth-child(1) { grid-area: daniel; }
+.card:nth-child(2) { grid-area: jonathan; }
+.card:nth-child(3) { grid-area: jeanette; }
+.card:nth-child(4) { grid-area: patrick; }
+.card:nth-child(5) { grid-area: kira; }
+
+/* Responsiv holat */
+@media (max-width: 900px) {
+  .container {
+    grid-template-areas:
+      "daniel"
+      "jonathan"
+      "jeanette"
+      "patrick"
+      "kira";
+  }
+}
